@@ -7,7 +7,7 @@ public class Pokemon {
 	public int health = 0;
 	public String type;
 	public static int numberOfPokemons = 0;
-	static ArrayList<String>allPokemons = new ArrayList<String>();
+	
 	
 	
 	public Pokemon(String name, int health, String type) {
@@ -16,16 +16,11 @@ public class Pokemon {
 		this.type = type;
 		System.out.println("Pokemon created: " + name);
 		numberOfPokemons++;
-		allPokemons.add(name);
 	}
 	
 	void attackPokemon(Pokemon pokemon) {
 		pokemon.health -= 10;
 		System.out.println(pokemon.name + " has been attacked by " + name + "!");
-	}
-	
-	public static ArrayList<String> getAllPokemons(){
-		return allPokemons;
 	}
 	
 	public String getName() {

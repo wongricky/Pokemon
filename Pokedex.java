@@ -1,22 +1,30 @@
 package com.pokemon;
 
+import java.util.ArrayList;
+
 public class Pokedex extends AbstractPokemon {
+	ArrayList<Pokemon>allPokemons;
+	
+	public Pokedex() {
+		allPokemons = new ArrayList<Pokemon>();
+	}
+	
 	public void listPokemon() {
-		
-	}
-
-	public Pokemon createPokemon() {
-		return null;
-	}
-
-	public String pokemonInfo(Pokemon pokemon) {
-		return null;
-	}
-
+		for (int i = 0; i < allPokemons.size(); i ++) {
+			System.out.println(allPokemons.get(i).getName());
+		}
+	};
+	
 	@Override
 	public Pokemon createPokemon(String name, int health, String type) {
-		// TODO Auto-generated method stub
-		return null;
+		System.out.println("New pokemon created: " + name);
+		Pokemon p = new Pokemon(name, health, type);
+		allPokemons.add(p);
+		return p;
 	}
+	
+	
+
+
 
 }
